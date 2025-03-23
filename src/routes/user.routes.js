@@ -7,6 +7,6 @@ const router = express()
 
 router.put('/profile', verifyToken, userController.updateUserProfile);
 router.get('/', verifyToken, isAdmin, userController.getUsers)
-router.patch('make-admin/:id', verifyToken, isAdmin, userController.changeToAdmin)
+router.patch('/make-admin/:id', verifyToken, isAdmin, userController.changeToAdmin)
 
 module.exports = router
